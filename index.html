@@ -1,55 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=">
-    <link rel="stylesheet" href="./elementor.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=" />
+    <link rel="stylesheet" href="./elementor.css" />
     <title>Elementor Forms x Paystack</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <center>
-        <h1>Elementor Forms x Paystack</h1>
-        <p>Generate JS Code for Paystack to use in Elementor</p>
+      <h1>Elementor Forms x Paystack</h1>
+      <p>Generate JS Code for Paystack to use in Elementor</p>
     </center>
     <div class="wrapper">
-        <div class="form">
-            <form id="form">
-                <div class="form-group">
-                    <input type="text" name="api_key" minlength="48" maxlength="48" id="api_key" required="required" placeholder="Live Public Key" />
-                </div>
+      <div class="form">
+        <form id="form">
+          <div class="form-group">
+            <input
+              type="text"
+              name="api_key"
+              minlength="48"
+              maxlength="48"
+              id="api_key"
+              required="required"
+              placeholder="Live Public Key"
+            />
+          </div>
 
-                <div class="form-group">
-                    <input type="number" name="amount" id="amount" required="required" placeholder="Amount to Charge" />
-                </div>
+          <div class="form-group">
+            <input
+              type="number"
+              name="amount"
+              id="amount"
+              required="required"
+              placeholder="Amount to Charge"
+            />
+          </div>
 
-                <div class="form-group">
-                    <input type="text" name="form_id" id="form_id" required="required" placeholder="Form ID" />
-                </div>
+          <div class="form-group">
+            <input
+              type="text"
+              name="form_id"
+              id="form_id"
+              required="required"
+              placeholder="Form ID"
+            />
+          </div>
 
-                <div class="form-group">
-                    <input type="text" name="email_id" id="email_id" required placeholder="Email ID" />
-                </div>
+          <div class="form-group">
+            <input
+              type="text"
+              name="email_id"
+              id="email_id"
+              required
+              placeholder="Email ID"
+            />
+          </div>
 
-                <div class="form-group">
-                    <input type="text" name="fullname_id" id="fullname_id" required placeholder="Fullname ID" />
-                </div>
+          <div class="form-group">
+            <input
+              type="text"
+              name="fullname_id"
+              id="fullname_id"
+              required
+              placeholder="Fullname ID"
+            />
+          </div>
 
-                <div class="form-group">
-                    <button type="submit" id="copy_button">Generate and Copy Code</button>
-                    <textarea id="code_output">
-        </textarea>
-                </div>
-
-            </form>
-        </div>
+          <div class="form-group">
+            <button type="submit" id="copy_button">
+              Generate and Copy Code
+            </button>
+            <textarea id="code_output"> </textarea>
+          </div>
+        </form>
+      </div>
     </div>
     <center>
-        <p>Don't understand what's going on? <br/>Read the <a href="#"><b>Documentation</b><!--</a> or <a href="http://web-boss.com.ng/aremu-smog" target="_blank"><b>View Demo</b></a> --></p>
+      <p>Don't understand what's going on? <br />Read the
+        <ahref="https://web-boss.com.ng/tutorials/how-to-use-elementor-forms-with-paystack/"
+          ><b>Documentation</b></a></p>
     </center>
 
     <script src="./elementor.js"></script>
-</body>
-
+  </body>
 </html>

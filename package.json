@@ -1,0 +1,35 @@
+{
+  "name": "elementor-paystack",
+  "version": "0.0.1",
+  "description": "A code generator for working with Paystack in Elementor",
+  "main": "elementor.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "npx prettier --write .",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BigTi0/elementor-paystack.git"
+  },
+  "keywords": [
+    "paystack",
+    "elementor",
+    "code",
+    "generator"
+  ],
+  "author": "Aremu Smog",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BigTi0/elementor-paystack/issues"
+  },
+  "homepage": "https://github.com/BigTi0/elementor-paystack#readme",
+  "devDependencies": {
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.4",
+    "prettier": "2.5.1"
+  },
+  "lint-staged": {
+    "*.{js,css,md}": "prettier --write"
+  }
+}

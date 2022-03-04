@@ -1,18 +1,18 @@
-const form = document.querySelector("#form")
-const generateCodeCopy = e => {
-	e.preventDefault()
+const form = document.querySelector("#form");
+const generateCodeCopy = (e) => {
+  e.preventDefault();
 
-	const api_key = document.querySelector("#api_key").value
+  const api_key = document.querySelector("#api_key").value;
 
-	const amount = document.querySelector("#amount").value
+  const amount = document.querySelector("#amount").value;
 
-	const form_id = document.querySelector("#form_id").value
+  const form_id = document.querySelector("#form_id").value;
 
-	const email_id = document.querySelector("#email_id").value
+  const email_id = document.querySelector("#email_id").value;
 
-	const fullname_id = document.querySelector("#fullname_id").value
+  const fullname_id = document.querySelector("#fullname_id").value;
 
-	const the_code = `
+  const the_code = `
 <script src="https://js.paystack.co/v1/inline.js"><\/script>
 <script>
 const elementor_paystack_form = document.querySelector("#${form_id}")
@@ -52,28 +52,28 @@ elementor_paystack_form.addEventListener("submit", elementor_pay_with_paystack, 
 
 
 <\/script>
-`
+`;
 
-	try {
-		navigator.clipboard.writeText(the_code)
-	} catch {
-		const output = document.createElement("textarea")
+  try {
+    navigator.clipboard.writeText(the_code);
+  } catch {
+    const output = document.createElement("textarea");
 
-		document.body.appendChild(output)
-		// const output = document.querySelector("#code_output")
-		output.value = the_code
+    document.body.appendChild(output);
+    // const output = document.querySelector("#code_output")
+    output.value = the_code;
 
-		output.select()
-		document.execCommand("copy")
-		document.body.removeChild(output)
-	}
+    output.select();
+    document.execCommand("copy");
+    document.body.removeChild(output);
+  }
 
-	const copy_button = document.querySelector("#copy_button")
-	copy_button.innerHTML = "Code Copied"
+  const copy_button = document.querySelector("#copy_button");
+  copy_button.innerHTML = "Code Copied";
 
-	setTimeout(() => {
-		copy_button.innerHTML = "Generate and Copy Code"
-	}, 3000)
-}
+  setTimeout(() => {
+    copy_button.innerHTML = "Generate and Copy Code";
+  }, 3000);
+};
 
-form.addEventListener("submit", generateCodeCopy, false)
+form.addEventListener("submit", generateCodeCopy, false);
